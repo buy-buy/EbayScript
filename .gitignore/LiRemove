@@ -1,0 +1,30 @@
+$(document).ready(function() {
+    'use strict';
+    $(" div div div div span span:contains('to')").closest('li').hide(4444);
+
+    $("style").append(".imgWr {position: relative; width: 100%; max-width: 400px;}.imgWr img {width: 100%; height: auto;}.imgWr .btn {position: absolute; top: 95%; left: 20%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); background-color: yellow; color: Black; font-size: 16px; padding: 1px 12px; border: none; cursor: pointer; border-radius: 5px; text-align: center;}.imgWr .btn:hover {background-color: red;}");
+    $("li div div div a").after("<button class='btn'>Button</button>");
+
+    $("button").click(function(){
+        //$(this) parentsUntil('img') .text() .val .html() .parent() .find('a.vip') .hide().closest('') .push('') .split('Bu')
+        var x = $(this).closest('li').find('a.vip').html();
+        $("#gh-ac").val(x);
+        $('#gh-ac').hide(333).show(333).hide(333).show(333);
+
+        var lbutton, lblen, i;
+        var good = ['b'];
+        var bad = [];
+
+        lbutton = x.split(' ');
+        lblen = lbutton.length;
+        for (i = 0; i < lblen; i++) {
+            var s = (lbutton[i]).toLowerCase();
+            if (good.includes(s)) {
+                alert("Good day !!!!!!!!!!!!!!!!!");
+            }
+            var f = (lbutton[i]);
+        }
+        alert(lbutton.includes('Pappy'));
+        //https://www.ebay.com/sch/i.html?_odkw=pappy+van+winkle&Featured%2520Refinements=Bourbon%2520Bottle&LH_Auction=1&_dcat=13916&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR0.TRC0.H0.TRS0&_nkw=pappy+van+winkle&_sacat=0
+    });
+})();
